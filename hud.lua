@@ -55,31 +55,31 @@ if (CLIENT) then
 	  surface.SetDrawColor(240, 248, 255)
 	  surface.SetMaterial(healthIcon)
 	  surface.DrawTexturedRect(5, 865, 30, 30)
-      surface.DrawTexturedRect(40, ScrH() - 30, 290 * (math.Clamp(ply:Health() / ply:GetMaxHealth(), 0, 0)), 20)
-      draw.SimpleText(" " .. LocalPlayer():Health() .. "%","MyFont", 40, ScrH() - 33,Color( 240, 248, 255 ),TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP)
+          surface.DrawTexturedRect(40, ScrH() - 30, 290 * (math.Clamp(ply:Health() / ply:GetMaxHealth(), 0, 0)), 20)
+          draw.SimpleText(" " .. LocalPlayer():Health() .. "%","MyFont", 40, ScrH() - 33,Color( 240, 248, 255 ),TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP)
       
 	 --icon hud Armor
 	  local armorIcon = ix.util.GetMaterial("materials/icearmour32.png")
 	  surface.SetDrawColor(240, 248, 255)
 	  surface.SetMaterial(armorIcon)
 	  surface.DrawTexturedRect(100, 865, 30, 30)
-      surface.DrawTexturedRect(1, ScrH() - 55, 290 * (math.Clamp(ply:Armor() / ply:GetMaxArmor(), 0, 0)), 20)
-      draw.SimpleText(" " .. LocalPlayer():Armor() .. "%","MyFont", 135, ScrH() - 33,Color( 255, 255, 255, 255 ),TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP)
+          surface.DrawTexturedRect(1, ScrH() - 55, 290 * (math.Clamp(ply:Armor() / ply:GetMaxArmor(), 0, 0)), 20)
+          draw.SimpleText(" " .. LocalPlayer():Armor() .. "%","MyFont", 135, ScrH() - 33,Color( 255, 255, 255, 255 ),TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP)
 
       --icon hud Stamina
 	  local staminaIcon = ix.util.GetMaterial("materials/iceplayer32.png")
 	  surface.SetDrawColor(240, 248, 255)
 	  surface.SetMaterial(staminaIcon)
 	  surface.DrawTexturedRect(195, 865, 30, 30)
-      surface.DrawTexturedRect(1, ScrH() - 80, 290 * (math.Clamp(ply:GetLocalVar("stm", 100) / 100, 0, 0)), 20)
-      draw.SimpleText(" " .. (math.Round(LocalPlayer():GetLocalVar("stm", 100),0)) .. "%","MyFont", 230, ScrH() - 33,Color( 255, 255, 255, 255 ),TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP)
+          surface.DrawTexturedRect(1, ScrH() - 80, 290 * (math.Clamp(ply:GetLocalVar("stm", 100) / 100, 0, 0)), 20)
+          draw.SimpleText(" " .. (math.Round(LocalPlayer():GetLocalVar("stm", 100),0)) .. "%","MyFont", 230, ScrH() - 33,Color( 255, 255, 255, 255 ),TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP)
 	  
 	 --icon hud Money
 	  local moneyIcon = ix.util.GetMaterial("materials/icesalary32.png")
 	  surface.SetDrawColor(240, 248, 255)
 	  surface.SetMaterial(moneyIcon)
 	  surface.DrawTexturedRect(380, 865, 30, 30)	
-      draw.SimpleText(" " .. ply:GetCharacter():GetMoney(),"MyFont", 415, ScrH() - 33, Color( 255, 255, 255, 255 ),TEXT_ALIGN_LEFT,TEXT_ALIGN_LEFT)
+          draw.SimpleText(" " .. ply:GetCharacter():GetMoney(),"MyFont", 415, ScrH() - 33, Color( 255, 255, 255, 255 ),TEXT_ALIGN_LEFT,TEXT_ALIGN_LEFT)
       
 	  --icon hud hunger
 	  local hungerIcon = ix.util.GetMaterial("materials/icehunger32.png")
